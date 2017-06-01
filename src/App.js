@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Nav from './components/nav.js';
 import Home from './components/home.js';
 import Battle from './components/battle.js';
+import Results from './components/results.js';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/battle' component={Battle} />
+            <Route path ='/battle/results' component={Results} />
             <Route path='/popular' component={Popular} />
             <Route render={function () {
               return <p>Not Found</p>
