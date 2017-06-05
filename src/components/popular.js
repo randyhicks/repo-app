@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import api from '../utils/api.js';
 import PropTypes from 'prop-types';
+import Loading from './loading.js';
 
 var RepoGrid = (props) => {
   return (
@@ -88,7 +89,7 @@ class Popular extends Component {
         selectedLanguage={this.state.selectedLanguage} 
         onSelect={this.updateLanguage} />
         {!this.state.repos
-          ? <p>Loading</p>
+          ? <Loading />
           : <RepoGrid repos={this.state.repos} />}
       </div>
     );
